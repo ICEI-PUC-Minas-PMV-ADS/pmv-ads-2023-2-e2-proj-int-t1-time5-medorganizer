@@ -1,0 +1,28 @@
+# Arquivos e diretórios do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Diretórios de dependências
+node_modules/
+
+# Arquivos de log
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Arquivos de ambiente
+.env
+
+# Arquivos de build e distribuição
+dist/
+build/
+
+# Diretórios de cache
+.cache/
+.next/
+
+# Diretórios e arquivos específicos do editor
+.vscode/
+.idea/
+*.swp
+*.swo
