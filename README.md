@@ -11,11 +11,11 @@ Plataforma de gerenciamento de informações médicas, projetada para simplifica
 ## Integrantes
 
 * Evandro Kumasaka
-* Pedro Bonfim
-* Wagner Martins
-* Victor Araújo
-* Leonardo Melgaço
-* Lucas Melo
+* Erick Patrick de Santana Santos
+⁠* Jaciane Santana dos Santos
+* Fabio Ferreira Castilho
+* Gabriel Mautone Costa
+
 
 ## Orientador
 
