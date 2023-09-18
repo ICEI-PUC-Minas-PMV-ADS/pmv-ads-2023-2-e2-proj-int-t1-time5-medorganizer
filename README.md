@@ -12,7 +12,7 @@ Plataforma de gerenciamento de informações médicas, projetada para simplifica
 
 * Evandro Kumasaka
 * Erick Patrick de Santana Santos
-⁠* Jaciane Santana dos Santos
+* Jaciane Santana dos Santos
 * Fabio Ferreira Castilho
 * Gabriel Mautone Costa
 
