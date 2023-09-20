@@ -1,7 +1,5 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
-
 Em uma era digital crescente, a maneira como gerenciamos e acessamos nossas informações médicas tornou-se vital. A saúde é uma das áreas mais sensíveis e importantes da vida, e ter uma ferramenta eficaz para administrá-la é imperativo. O projeto MedOrganizer busca preencher essa lacuna, proporcionando uma solução integrada para pacientes e cuidadores que enfrentam desafios diários na gestão de suas informações de saúde.
 
 ## Problema
