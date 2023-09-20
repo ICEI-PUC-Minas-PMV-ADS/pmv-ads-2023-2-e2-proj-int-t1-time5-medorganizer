@@ -10,7 +10,7 @@ As personas levantadas durante o processo de entendimento do problema são apres
 
 2. Dona Helena tem 80 anos, é posentada, mora sozinha e possui uma cuidadora. Gostaria de ter independência e compartilhar informações com os filhos, mas tem dificuldade em usar novas tecnologias. A sua cuidadora poderia auxiliá-la com agendamentos e lembretes de consultas e medicações.
 
-3. Lucas Moreira tem 21 anos, trabalha como programador júnior e também estuda. Deseja crescimento profissional e manter a forma física, mas tem dificuldade de ncontrar suplementos adequados. Busca locais confiáveis para compra de suplementação adequada.
+3. Lucas Moreira tem 21 anos, trabalha como programador júnior, estuda e pratica bastante atividade física. Deseja crescimento profissional e manter a forma física, mas tem dificuldade de encontrar suplementos adequados. Busca locais confiáveis para compra de suplementação adequada.
 
 4. Gabriela Souza tem 35 anos, é nutricionista e tem um filho. Pensa em promover uma vida saudável para sua família, mas tem dificuldade de equilibrar trabalho e vida pessoal. Gostaria de uma agenda funcional para organizar sua rotinna de alimentação, suplementação e treinos.
 
@@ -18,25 +18,24 @@ As personas levantadas durante o processo de entendimento do problema são apres
 
 ## Histórias de Usuários
 
-Com base na análise das personas forma identificadas as seguintes histórias de usuários:
+A partir da compreensão do dia a dia das personas identificadas para o projeto, foram registradas as seguintes histórias de usuários:
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
-
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
-
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User Stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de Usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 Common User Story Mistakes](https://airfocus.com/blog/user-story-mistakes/)
+| Pessoa com vida agitada | Gerenciar e visualizar minha consultas e medicações de forma integrada | Não esquecer de cuidar da saúde |
+| Pessoa com vida agitada | Ter lembretes automáticos de minhas consultas e medicações | Não esquecer de cuidar da saúde |
+| Pessoa idosa | Compartilhar informações médicas de forma facilitada com cuidadora e familiares | Que me ajudem |
+| Pessoa idosa | Navegar sem dificuldades em uma interface simples | Navegar sem dificuldades |
+| Pessoa jovem | Registrar e monitorar os suplementos que uso | Garantir a dosagem correta e maximizar meus resultados |
+| Pessoa jovem | Ter acesso a informações dobre os melhores suplementos e dosagens | Otimizar performance e saúde |
+| Pessoa responsável pela família | Armazenar e visualizar as informações de saúde de toda família | Garantir que todos estejam recebendo o cuidado adequado |
+| Pessoa responsável pela família | Ter acesso a dicas e artigos sobre nutrição e saúde | Manter a família informada e saudável |
+| Pessoa com vida agitada | Integrar aplicativo com o calendário do trabalho | Garantir que não perderá os compromissos pessoais |
+| Pessoa com vida agitada | Ter acesso rápido a meditações e dicas de relaxamento | Equilibrar a rotina agitada e estressante |
 
 ## Requisitos
 
-Cojm base nas histórias de usuários, foi definido os requisitos funcionais e não funcionais que detalham o escopo do projeto e estão descritos nas tabelas a seguir.
+Com base nas histórias de usuários, foi definido os requisitos funcionais e não funcionais que detalham o escopo do projeto e estão descritos nas tabelas a seguir.
 
 ### Requisitos Funcionais
 
