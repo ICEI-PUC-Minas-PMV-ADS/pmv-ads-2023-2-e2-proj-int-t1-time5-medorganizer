@@ -4,22 +4,22 @@
 
 `ADS`
 
-`1ro Semestre`
+`2ro Semestre (Eixo 2)`
 
 Plataforma de gerenciamento de informações médicas, projetada para simplificar o acompanhamento e compartilhamento de históricos médicos, consultas, medicamentos e exames. Ele oferece uma solução segura e fácil de usar que ajuda pacientes e cuidadores a manterem-se organizados e informados, melhorando a comunicação com profissionais de saúde e farmácias.
 
 ## Integrantes
 
 * Evandro Kumasaka
-* Pedro Bonfim
-* Wagner Martins
-* Victor Araújo
-* Leonardo Melgaço
-* Lucas Melo
+* Erick Patrick de Santana Santos
+* Jaciane Santana dos Santos
+* Fabio Ferreira Castilho
+* Gabriel Mautone Costa
+
 
 ## Orientador
 
-* Carlos Alberto Marques Pietrobon
+* Rosilane Ribeiro da Mota
 
 ## Instruções de utilização
 
