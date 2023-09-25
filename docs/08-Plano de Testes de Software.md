@@ -24,7 +24,7 @@ Enumere quais cenários de testes foram selecionados para teste. Neste tópico o
 |CT-014| Home | Ao clicar no ícone "Clínicas", é esperado que o usuário seja redirecionado para a página "Clínicas". |
 |CT-015| Home | Ao clicar no ícone "Medicamentos", é esperado que o usuário seja redirecionado para a página "Medicamentos". |
 |CT-016| Home | Ao clicar no ícone "Agendamentos", é esperado que o usuário seja redirecionado para a página "Agendamentos". |
-|CT-017| Home | Ao clicar no ícone "Arquivos", é esperado que o usuário seja redirecionado para a página "Arquivos". |
+|CT-017| Home | Ao clicar no ícone "Documentos", é esperado que o usuário seja redirecionado para a página "Documentos". |
 |CT-018| Home | Ao clicar em algum dia do calendário, é esperado que o usuário seja redirecionado para a página de "Agendamentos" daquele dia. |
 |CT-019| Home | Ao clicar no ícone do perfil de usuário, é esperado que o usuário seja redirecionado para a página de "Dados Pessoais". |
 |CT-020| Home | Ao clicar em "Sair", é esperado que o usuário seja redirecionado para a página de "Login". |
@@ -40,8 +40,8 @@ Enumere quais cenários de testes foram selecionados para teste. Neste tópico o
 |CT-030| Agendamentos | É esperado que seja exibido lista com todos os agendamentos já cadastrados com opções de filtros e de cadastrar novo agendamento. |
 |CT-031| Agendamentos | Ao clicar em "Novo Agendamento", é esperado que seja exibido um modal, onde ao preencher todos os campos corretamente e clicar em "Salvar", o agendamento seja salvo no sistema e o modal feche. |
 |CT-032| Agendamentos | Ao clicar em "Novo Agendamento", é esperado que seja exibido um modal, onde ao clicar em "Cancelar" ou no ícone "X" o modal feche. |
-|CT-033| Arquivos | É esperado que seja exibido lista com todos os arquivos já carregados e opção de carregar novo arquivo. |
-|CT-034| Arquivos | Ao clicar em "Novo Arquivo", é esperado que seja exibido um modal, onde ao selecionar o tipo do arquivo, fazer o upload e clicar em "Salvar", o arquivo seja salvo no sistema e o modal feche. |
-|CT-035| Arquivos | Ao clicar em "Novo Arquivo", é esperado que seja exibido um modal, onde ao clicar em "Cancelar" ou no ícone "X" o modal feche. |
+|CT-033| Documentos | É esperado que seja exibido lista com todos os documentos já carregados e opção de carregar novo documento. |
+|CT-034| Documentos | Ao clicar em "Novo Arquivo", é esperado que seja exibido um modal, onde ao selecionar o tipo do documento, fazer o upload e clicar em "Salvar", o arquivo seja salvo no sistema e o modal feche. |
+|CT-035| Documentos | Ao clicar em "Novo Arquivo", é esperado que seja exibido um modal, onde ao clicar em "Cancelar" ou no ícone "X" o modal feche. |
 |CT-036| Dados Pessoais | Ao clicar em "Atualizar Dados Pessoais", alterar algum campo corretamente e clicar em "Salvar", é esperado que o cadastro do usuário seja atualizado no sistema. |
 |CT-037| Dados Pessoais | Ao clicar em "Atualizar Dados Pessoais" e depois em "Cancelar", a edição é cancelada. |
