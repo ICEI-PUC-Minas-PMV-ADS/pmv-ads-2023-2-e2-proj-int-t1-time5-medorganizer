@@ -9,5 +9,7 @@ namespace MedOrganizer.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) {}
 
         public DbSet<Clinica> Clinicas { get; set; }
+
+        public DbSet<Usuario> Usuarios { get; set; }
     }
 }
