@@ -13,6 +13,8 @@ namespace MedOrganizer.Data
         public DbSet<Clinica> Clinicas { get; set; }
 
         public DbSet<Usuario> Usuarios { get; set; }
+        
+        public DbSet<Medico> Medicos { get; set; }
 
     }
 }
