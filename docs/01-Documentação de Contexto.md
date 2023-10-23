@@ -4,11 +4,8 @@ Em uma era digital crescente, a maneira como gerenciamos e acessamos nossas info
 
 ## Problema
 
-A gestão eficiente de horários, medicamentos e documentos é fundamental para pacientes e cuidadores, especialmente para aqueles que tomam medicações regularmente ou interagem com diversos profissionais de saúde. No entanto, essa gestão pode ser uma tarefa desafiadora e complicada. Os principais problemas enfrentados incluem:
-- Dificuldades em lembrar dos horários e dosagens das medicações;
-- Perda ou esquecimento de documentos importantes;
-- Desafios em coordenar e comunicar informações médicas entre os diferentes profissionais de saúde;
-- Falta de um sistema integrado e automatizado para organizar, compartilhar e gerenciar informações médicas, como consultas, medicamentos em uso e exames médicos.
+Problema a ser resolvido pela aplicação MedOrganizer:
+Indivíduos enfrentam desafios ao tentar gerenciar manualmente a administração de uma quantidade significativa de medicamentos ou suplementos. Esse controle manual pode ser demorado e, em muitos casos, quase impossível de ser efetivado com precisão. Esse desafio se estende tanto para aqueles que buscam atingir objetivos pessoais de saúde quanto para cuidadores que têm a responsabilidade de administrar medicamentos a outras pessoas. A aplicação MedOrganizer se propõe a ser uma solução para essa complexa gestão, facilitando o controle e a administração adequados de medicamentos e suplementos.
 
 ## Objetivos
 
