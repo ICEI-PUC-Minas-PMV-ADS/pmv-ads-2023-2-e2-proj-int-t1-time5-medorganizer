@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MedOrganizer.Data;
 using MedOrganizer.Models;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication;
 
 namespace MedOrganizer.Controllers
 {
@@ -25,6 +27,59 @@ namespace MedOrganizer.Controllers
               return _context.Usuarios != null ? 
                           View(await _context.Usuarios.ToListAsync()) :
                           Problem("Entity set 'ApplicationDbContext.Usuarios'  is null.");
+        }
+
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Login(Usuario usuario)
+        {
+            var dados = await _context.Usuarios.FindAsync(usuario.Id);
+
+            if (dados == null)
+            {
+                ViewBag.Message = "Usuario e/ou senha inválido!";
+                return View();
+            }
+
+            bool senhaValida = BCrypt.Net.BCrypt.Verify(usuario.Senha, dados.Senha);
+            
+            if (senhaValida)
+            {
+                var claims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.Name, dados.Nome),
+                    new Claim(ClaimTypes.NameIdentifier, dados.Id.ToString()),
+                    new Claim(ClaimTypes.Role, dados.Perfil.ToString())
+                };
+
+                var userIdentity = new ClaimsIdentity(claims, "login");
+                ClaimsPrincipal principal = new ClaimsPrincipal(userIdentity);
+
+                var props = new AuthenticationProperties
+                {
+                    AllowRefresh = true,
+                    ExpiresUtc = DateTime.UtcNow.ToLocalTime().AddHours(8),
+                    IsPersistent = true
+                };
+
+                await HttpContext.SignInAsync(principal, props);
+                return Redirect("/");
+            }
+            else
+            {
+                ViewBag.Message = "Usuario e/ou senha inválido!";
+                return View();
+            }
+        }
+
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync();
+            return RedirectToAction("Login", "Usuarios");
         }
 
         // GET: Usuarios/Details/5
@@ -60,6 +115,7 @@ namespace MedOrganizer.Controllers
         {
             if (ModelState.IsValid)
             {
+                usuario.Senha = BCrypt.Net.BCrypt.HashPassword(usuario.Senha);
                 _context.Add(usuario);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -99,6 +155,7 @@ namespace MedOrganizer.Controllers
             {
                 try
                 {
+                    usuario.Senha = BCrypt.Net.BCrypt.HashPassword(usuario.Senha);
                     _context.Update(usuario);
                     await _context.SaveChangesAsync();
                 }
