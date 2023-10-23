@@ -1,15 +1,13 @@
 # Registro de Testes de Software
 
-Relatório com as evidências dos testes de software realizados no sistema pela equipe, baseado no <a href="8-Plano de Testes de Software.md"> Plano de Testes de Software</a>.
+Relatório com as evidências dos testes de software realizados no sistema pela equipe, baseado no <a href="08-Plano de Testes de Software.md"> Plano de Testes de Software</a>.
 
 ## Avaliação
 
-Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identificados na solução. Comente como o grupo pretende atacar esses pontos nas próximas iterações. Apresente as falhas detectadas e as melhorias geradas a partir dos resultados obtidos nos testes.
-
-Conforme testes realizados para verificação dos requisitos funcionais e dos Cenários de Teste de Software definidos antecipadamente, obtivemos os seguintes resultados para as funcionalidades:
+Conforme testes realizados para verificação dos cenários de teste de software definidos antecipadamente, obtivemos os seguintes resultados para as funcionalidades:
 
 ### Home
-- Pontos fortes: O sistema tem uma home uqe permite ao usuário a visão geral de todas as funcionalidades.
+- Pontos fortes: O sistema tem uma home que permite ao usuário a visão geral de todas as funcionalidades.
 - Pontos a melhorar: Design.
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t1-time5-medorganizer/assets/99828297/c49a645e-92cd-4eb3-9d58-33ffeeae52a5)
 
