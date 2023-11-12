@@ -1,10 +1,10 @@
 ﻿@model MedOrganizer.Models.Medico
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalhes";
 }
 
-<h1>Details</h1>
+<h1>Detalhes</h1>
 @* Id, Nome, Crm, Celular, Email, ValorConsulta, Especialidade, Anotacoes *@
 <div>
     <h4>Medicamento</h4>
@@ -49,6 +49,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Editar</a> |
+    <a asp-action="Index">Voltar</a>
 </div>

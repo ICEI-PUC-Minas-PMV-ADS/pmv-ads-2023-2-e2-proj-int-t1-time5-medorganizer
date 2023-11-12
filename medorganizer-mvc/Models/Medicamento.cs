@@ -20,9 +20,12 @@ public class Medicamento
     [Required(ErrorMessage = "Obrigatório informar a classificação!")]
     [Display(Name = "Classificação")]
     public Classificacao Classificacao { get; set; }
-    
+
+    [Required(ErrorMessage = "Obrigatório informar o fabricante!")]
+    [Display(Name = "Fabricante")]
     public string Fabricante { get; set; }
-    
+
+    [Required(ErrorMessage = "Obrigatório informar a descrição!")]
     [Display(Name = "Descrição")]
     public string Descricao { get; set; }
     

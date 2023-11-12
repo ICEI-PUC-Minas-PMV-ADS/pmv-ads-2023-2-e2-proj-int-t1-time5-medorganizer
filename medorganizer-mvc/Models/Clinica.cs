@@ -19,6 +19,7 @@ namespace MedOrganizer.Models
         public string Celular { get; set; }
 
         [Required(ErrorMessage = "Email é um atributo obrigatório")]
+        [EmailAddress(ErrorMessage = "O endereço de email fornecido não é válido.")]
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Url é um atributo obrigatório")]

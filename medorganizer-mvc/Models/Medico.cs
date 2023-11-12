@@ -26,6 +26,7 @@ public class Medico
     [EmailAddress(ErrorMessage = "O endereço de email fornecido não é válido.")]
     public string Email { get; set; }
 
+    [Required(ErrorMessage = "Valor da Consulta é um atributo obrigatório")]
     [Range(0, double.MaxValue, ErrorMessage = "O valor da consulta não pode ser negativo.")]
     [Display(Name = "Valor da Consulta")]
     public decimal ValorConsulta { get; set; }
@@ -33,7 +34,8 @@ public class Medico
     [Required(ErrorMessage = "Especialidade é um atributo obrigatório")]
     [MaxLength(100, ErrorMessage = "A especialidade não pode ter mais do que 100 caracteres.")]
     public string Especialidade { get; set; }
-    
+
+    [Required(ErrorMessage = "Anotações é um atributo obrigatório")]
     [MaxLength(500, ErrorMessage = "Anotações não podem ter mais do que 500 caracteres.")]
     [Display(Name = "Anotações")]
     public string Anotacoes { get; set; }
