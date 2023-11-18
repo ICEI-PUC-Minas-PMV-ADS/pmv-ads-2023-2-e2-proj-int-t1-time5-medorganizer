@@ -11,9 +11,11 @@ using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using NuGet.Protocol;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MedOrganizer.Controllers
 {
+    [Authorize(Roles ="Admin")]
     public class UsuariosController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -30,13 +32,21 @@ namespace MedOrganizer.Controllers
                           View(await _context.Usuarios.ToListAsync()) :
                           Problem("Entity set 'ApplicationDbContext.Usuarios'  is null.");
         }
+        
+        [AllowAnonymous]
+        public IActionResult AccessDenied()
+        {
+            return View();
+        }
 
+        [AllowAnonymous]
         public IActionResult Login()
         {
             return View();
         }
 
         [HttpPost]
+        [AllowAnonymous]
         public async Task<IActionResult> Login(Usuario usuario)
         {
             var dados = await _context.Usuarios.FindAsync(usuario.Id);
@@ -79,6 +89,7 @@ namespace MedOrganizer.Controllers
             return View();
         }
 
+        [AllowAnonymous]
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);

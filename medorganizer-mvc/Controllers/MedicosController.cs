@@ -1,10 +1,12 @@
 using MedOrganizer.Data;
 using MedOrganizer.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace MedOrganizer.Controllers
 {
+    [Authorize]
     public class MedicosController : Controller
     {
         private readonly ApplicationDbContext _context;

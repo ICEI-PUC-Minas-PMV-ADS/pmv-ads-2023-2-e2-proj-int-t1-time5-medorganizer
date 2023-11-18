@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MedOrganizer.Data;
 using MedOrganizer.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MedOrganizer.Controllers
 {
+    [Authorize]
     public class ClinicasController : Controller
     {
         private readonly ApplicationDbContext _context;
