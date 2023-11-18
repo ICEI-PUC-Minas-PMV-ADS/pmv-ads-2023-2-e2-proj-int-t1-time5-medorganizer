@@ -29,14 +29,15 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Clinicas" asp-action="Index">Clínicas</a>
                         </li>  
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Usuarios" asp-action="Index">Usuários</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Medicos" asp-action="Index">Médicos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Medicos" asp-action="Index">Médicos</a>
-                        </li>  
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Usuarios"
+                                asp-action="Index">Usuários</a>
+                        </li>
                     </ul>
                     <ul class="navbar-nav flex-grow-2">
-                        @if (User.Identity.IsAuthenticated)
+                        @if(User.Identity.IsAuthenticated)
                         {
                             <li class="nav-item">
                                 Olá, @User.Identity.Name <a class="nav-link text-dark" asp-area="" asp-controller="Usuarios" asp-action="Logout">Sair</a>

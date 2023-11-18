@@ -9,6 +9,8 @@ using MedOrganizer.Data;
 using MedOrganizer.Models;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using NuGet.Protocol;
 
 namespace MedOrganizer.Controllers
 {
@@ -24,7 +26,7 @@ namespace MedOrganizer.Controllers
         // GET: Usuarios
         public async Task<IActionResult> Index()
         {
-              return _context.Usuarios != null ? 
+            return _context.Usuarios != null ? 
                           View(await _context.Usuarios.ToListAsync()) :
                           Problem("Entity set 'ApplicationDbContext.Usuarios'  is null.");
         }
@@ -56,29 +58,30 @@ namespace MedOrganizer.Controllers
                     new Claim(ClaimTypes.Role, dados.Perfil.ToString())
                 };
 
-                var userIdentity = new ClaimsIdentity(claims, "login");
+                var userIdentity = new ClaimsIdentity(claims, "Login");
                 ClaimsPrincipal principal = new ClaimsPrincipal(userIdentity);
 
                 var props = new AuthenticationProperties
                 {
                     AllowRefresh = true,
                     ExpiresUtc = DateTime.UtcNow.ToLocalTime().AddHours(8),
-                    IsPersistent = true
+                    IsPersistent = true,
                 };
 
-                await HttpContext.SignInAsync(principal, props);
+                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal, props);
                 return Redirect("/");
             }
             else
             {
                 ViewBag.Message = "Usuario e/ou senha inválido!";
-                return View();
+            
             }
+            return View();
         }
 
         public async Task<IActionResult> Logout()
         {
-            await HttpContext.SignOutAsync();
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return RedirectToAction("Login", "Usuarios");
         }
 
