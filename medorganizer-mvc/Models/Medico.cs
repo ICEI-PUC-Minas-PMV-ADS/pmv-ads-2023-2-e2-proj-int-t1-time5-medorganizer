@@ -39,4 +39,14 @@ public class Medico
     [MaxLength(500, ErrorMessage = "Anotações não podem ter mais do que 500 caracteres.")]
     [Display(Name = "Anotações")]
     public string Anotacoes { get; set; }
+
+    public Medico()
+    {
+        Nome = string.Empty;
+        Crm = string.Empty;
+        Celular = string.Empty;
+        Email = string.Empty;
+        Especialidade = string.Empty;
+        Anotacoes = string.Empty;
+    }
 }

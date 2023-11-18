@@ -18,6 +18,12 @@ namespace MedOrganizer.Models
 
         [Required(ErrorMessage = "Perfil é um atributo obrigatório")]
         public Perfil Perfil { get; set; }
+
+        public Usuario()
+        {
+            Nome = string.Empty;
+            Senha = string.Empty;
+        }
     }
 
     public enum Perfil

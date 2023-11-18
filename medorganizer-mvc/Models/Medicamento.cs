@@ -40,6 +40,14 @@ public class Medicamento
     [Required(ErrorMessage = "Obrigatório informar se tem retenção da receita!")]
     [Display(Name = "Retenção da Receita")]
     public bool RetencaoReceita { get; set; }
+
+    public Medicamento()
+    {
+        Nome = string.Empty;
+        PrincipioAtivo = string.Empty;
+        Fabricante = string.Empty;
+        Descricao = string.Empty;
+    }
 }
 
 public enum TipoMedicamento

@@ -30,5 +30,16 @@ namespace MedOrganizer.Models
 
         [Required(ErrorMessage = "Endereço é um atributo obrigatório")]
         public string Endereco { get; set; }
+
+        public Clinica()
+        {
+            Nome = string.Empty;
+            Telefone = string.Empty;
+            Celular = string.Empty;
+            Email = string.Empty;
+            Url = string.Empty;
+            ChavePix = string.Empty;
+            Endereco = string.Empty;
+        }
     }
 }
