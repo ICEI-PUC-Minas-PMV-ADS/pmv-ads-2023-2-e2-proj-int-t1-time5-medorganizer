@@ -16,8 +16,7 @@ namespace MedOrganizer.Models
         [DataType(DataType.Password)]
         public string Senha { get; set; }
 
-        [Required(ErrorMessage = "Perfil é um atributo obrigatório")]
-        public Perfil Perfil { get; set; }
+        public Perfil Perfil { get; set; } = Perfil.User;
 
         public Usuario()
         {

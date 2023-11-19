@@ -115,6 +115,7 @@ namespace MedOrganizer.Controllers
         }
 
         // GET: Usuarios/Create
+        [AllowAnonymous]
         public IActionResult Create()
         {
             return View();
@@ -124,8 +125,8 @@ namespace MedOrganizer.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nome,Senha,Perfil")] Usuario usuario)
+        [AllowAnonymous]
+        public async Task<IActionResult> Create([Bind("Id,Nome,Senha")] Usuario usuario)
         {
             if (ModelState.IsValid)
             {
