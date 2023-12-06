@@ -4,12 +4,30 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 
 ## Avaliação
 
-Conforme testes realizados para verificação dos cenários de teste de software definidos antecipadamente, obtivemos os seguintes resultados para as funcionalidades:
+Conforme testes realizados para verificação dos cenários de teste de software definidos antecipadamente, obtivemos os seguintes resultados:
 
-### Home
-- Pontos fortes: O sistema tem uma home que permite ao usuário a visão geral de todas as funcionalidades.
-- Pontos a melhorar: Design.
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t1-time5-medorganizer/assets/99828297/c49a645e-92cd-4eb3-9d58-33ffeeae52a5)
+### Login
+| Nº Teste | Cenário de teste | Registro de teste |
+|----------|--------|------------------|
+|CT-001| Ao preencher os campos "E-mail" e "Senha" com e-mail e senha que já são cadastrados no sistema e clicar em "Login", o usuário deve ser redirecionado para a página "Home" e estar logado no sistema. | Correto |
+|CT-002| Ao preencher os campos "E-mail" e "Senha" com e-mail ou senha que não são cadastrados no sistema e clicar em "Login", o usuário deve visualizar uma mensagem de erro. | É exibido mensagens de erro para campos inválidos |
+|CT-003| Ao clicar em "Esqueceu sua senha?", o usuário deve ser redirecionado para a página de "Recuperar Senha". | Está redirecionando para página de Recuperar Senha |
+|CT-004| Ao clicar em "Login with Google", se o usuário estiver logado no aparelho com a conta do Google, então ele deve ser redirecionado para a página "Home" e estar logado no sistema. | Funcionalidade não disponível |
+|CT-005| Ao clicar em "Login with Google", se o usuário não estiver logado no aparelho com a conta do Google, então deve ser redirecionado para a tela de login do Google. | Funcionalidade não disponível |
+|CT-006| Ao clicar em "Registre-se como um novo usuário", é esperado que abra a página de Cadastro. | Está redirecionando para página de Cadastro |
+
+### Recuperar Senha
+| Nº Teste | Cenário de teste | Registro de teste |
+|----------|--------|------------------|
+|CT-007| Ao preencher o campo "E-mail" com e-mail que já é cadastrado no sistema e clicar em "Enviar", é esperado que usuário receba e-mail com a senha. | Funcionalidade não atendida |
+|CT-008| Ao clicar em "Retornar para Login", é esperado que usuário seja redirecionado para a tela de Login. | Funcionalidade não atendida |
+
+### Cadastro
+| Nº Teste | Cenário de teste | Registro de teste |
+|----------|--------|------------------|
+|CT-009| Ao preencher todos os campos válidos e clicar em "Registro", o usuário deve receber e-mail de confirmação e ser redirecionado para a página de "Login". | É exibido mensagem de confirmação na tela mas não é enviado e-mail de confirmação |
+|CT-010| Ao preencher algum campo incorretamente e clicar em "Registro", o usuário deve visualizar mensagem de erro referente ao campo inválido. | É exibido mensagens de erro para campos inválidos |
+|CT-011| Ao clicar em "Registro", é esperado que usuário seja redirecionado para a página de "Login". | Não está redirecionando para página de Login |
 
 ### Medicamentos
 - Pontos fortes: Todas as opções de cadastrar, editar, listar, visualizar detalhes, deletar e validações de campos estão funcionando.
