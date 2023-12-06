@@ -38,7 +38,7 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
 <li><a href="docs/10-Plano de Testes de Usabilidade.md"> Plano de Testes de Usabilidade</a></li>
 <li><a href="docs/11-Registro de Testes de Usabilidade.md"> Registro de Testes de Usabilidade</a></li>
 <li><a href="docs/12-Registro de Testes de Usabilidade.md"> Registro de Testes de Usabilidade</a></li>
-<li><a href="docs/13-Relatório de Testes.md"> Relatório de Testes</a></li>
+<li><a href="docs/13-Relatorio de Testes.md"> Relatório de Testes</a></li>
 <li><a href="docs/14-Referências.md"> Referências</a></li>
 </ol>
 
