@@ -1,6 +1,6 @@
 # Relatório de Testes
 
-Relatório com as evidências dos testes, onde é indicado os pontos fortes e pontos a melhorar que foram identificados durante após o desenvolvimento do sistema.
+Relatório com as evidências dos testes, onde é indicado os pontos fortes e pontos a melhorar que foram identificados após o desenvolvimento do sistema e realização de testes de usabilidade por usuários com a persona desejada.
 Nota-se que a maioria dos requisitos funcionais e não funcionais foram atendidos, tendo apenas alguns pontos a melhorar que foram descritos abaixo, desta forma atendendo a espectativa de todos do time e dos usuários.
 
 ### Login
