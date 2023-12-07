@@ -1,7 +1,9 @@
 # Relatório de Testes
 
 Relatório com as evidências dos testes, onde é indicado os pontos fortes e pontos a melhorar que foram identificados após o desenvolvimento do sistema e realização de testes de usabilidade por usuários com a persona desejada.
-Nota-se que a maioria dos requisitos funcionais e não funcionais foram atendidos, tendo apenas alguns pontos a melhorar que foram descritos abaixo, desta forma atendendo a espectativa de todos do time e dos usuários.
+Nota-se que a maioria dos requisitos funcionais e não funcionais foram atendidos, tendo apenas alguns pontos a melhorar que foram descritos abaixo.
+De forma geral o sistema é claro, objetivo e de fácil acesso. Todas as funcionalidades tem as opções de cadastrar, editar, listar, visualizar detalhes, voltar e deletar de forma intuitiva. Todas as telas de cadastro e edição tem validações dos campos. Sempre ao cadastrar ou editar algo ocorre o redirecionamento para a página com a lista dos registros já cadastrados. É possível fazer cadatsro e login de forma segura. 
+Desta forma, entendemos que foi atendida a espectativa de todos do time e dos usuários.
 
 ### Login
 - Pontos fortes: Tem validações para campos vazios, formato de e-mail, e-mail não cadastrado no sistema e senha inválida, desta forma sinalizando o erro exato para o usuário. Após logado o usuário é redirecionado para a página Home com a visão geral de todas as funcionalidades do sistema.
