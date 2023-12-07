@@ -8,14 +8,24 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 var connectionString = "";
-if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
+if (builder.Environment.IsDevelopment())
 {
-    connectionString = builder.Configuration.GetConnectionString("MacConnection");
+    if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
+    {
+        connectionString = builder.Configuration.GetConnectionString("MacConnection");
+    }
+    else
+    {
+        connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+    }
 }
 else
 {
-    connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+    // Use AzureConnection in production environment
+    //connectionString = builder.Configuration["AZURE_SQL_CONNECTIONSTRING"];
+    connectionString = builder.Configuration.GetConnectionString("AzureConnection");
 }
+Console.WriteLine("Conexao DB: " + connectionString);
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
