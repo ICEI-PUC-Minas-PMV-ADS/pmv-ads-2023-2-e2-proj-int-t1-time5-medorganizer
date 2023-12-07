@@ -59,26 +59,26 @@ Conforme testes realizados para verificação dos cenários de teste de software
 ### Medicamentos
 | Nº Teste | Cenário de teste | Registro de teste |
 |----------|--------|------------------|
-|CT-027| É esperado que seja exibido lista com todos os medicamentos já cadastrados e opção de cadastrar novo medicamento. | É exibido lista de Medicamentos já cadastrados e as opções de editar, excluir, ver detalhes ou cadastrar novo médico |
+|CT-027| É esperado que seja exibido lista com todos os medicamentos já cadastrados e opção de cadastrar novo medicamento. | É exibido lista de Medicamentos já cadastrados e as opções de editar, excluir, ver detalhes ou cadastrar novo medicamento |
 |CT-028| Ao clicar em "Novo Medicamento", é esperado que seja exibido um modal, onde ao preencher todos os campos corretamente e clicar em "Salvar", o medicamento seja salvo no sistema e o modal feche. | Não abre modal, é redirecionado para outra página onde ao cadastrar novo medicamento foi salvo e exibido na lista |
 |CT-029| Ao clicar em "Novo Medicamento", é esperado que seja exibido um modal, onde ao clicar em "Cancelar" ou no ícone "X" o modal feche. | Não abre modal, é redirecionado para outra página onde ao clicar em Voltar, é redirecinado para página inicial de Medicamentos |
 
 ### Agendamentos
 | Nº Teste | Cenário de teste | Registro de teste |
 |----------|--------|------------------|
-|CT-030| É esperado que seja exibido lista com todos os agendamentos já cadastrados com opções de filtros e de cadastrar novo agendamento. | Agendamentos | 
-|CT-031| Ao clicar em "Novo Agendamento", é esperado que seja exibido um modal, onde ao preencher todos os campos corretamente e clicar em "Salvar", o agendamento seja salvo no sistema e o modal feche. | Agendamentos | 
-|CT-032| Ao clicar em "Novo Agendamento", é esperado que seja exibido um modal, onde ao clicar em "Cancelar" ou no ícone "X" o modal feche. | Agendamentos |
+|CT-030| É esperado que seja exibido lista com todos os agendamentos já cadastrados com opções de filtros e de cadastrar novo agendamento. | É exibido lista de Agendamentos de consultas e exames já cadastrados, porém sem opção de filtrar ou cadastrar novo agendamento | 
+|CT-031| Ao clicar em "Novo Agendamento", é esperado que seja exibido um modal, onde ao preencher todos os campos corretamente e clicar em "Salvar", o agendamento seja salvo no sistema e o modal feche. | Não tem a funcionalidade Novo Agendamento, é preciso clicar em Consultas Médicas ou Exames para realizar novo agendamento | 
+|CT-032| Ao clicar em "Novo Agendamento", é esperado que seja exibido um modal, onde ao clicar em "Cancelar" ou no ícone "X" o modal feche. | Não tem a funcionalidade Novo Agendamento |
 
 ### Prescrições (Documentos)
 | Nº Teste | Cenário de teste | Registro de teste |
 |----------|--------|------------------|
-|CT-033| É esperado que seja exibido lista com todos os documentos já carregados e opção de carregar novo documento. | Documentos |
-|CT-034| Ao clicar em "Novo Arquivo", é esperado que seja exibido um modal, onde ao selecionar o tipo do documento, fazer o upload e clicar em "Salvar", o arquivo seja salvo no sistema e o modal feche. | Documentos |
-|CT-035| Ao clicar em "Novo Arquivo", é esperado que seja exibido um modal, onde ao clicar em "Cancelar" ou no ícone "X" o modal feche. | Documentos |
+|CT-033| É esperado que seja exibido lista com todos os documentos já carregados e opção de carregar novo documento. | É exibido lista de Prescrições já cadastradas e as opções de editar, excluir, ver detalhes ou cadastrar nova prescrição |
+|CT-034| Ao clicar em "Novo Arquivo", é esperado que seja exibido um modal, onde ao selecionar o tipo do documento, fazer o upload e clicar em "Salvar", o arquivo seja salvo no sistema e o modal feche. | Funcionalidade não atendida |
+|CT-035| Ao clicar em "Novo Arquivo", é esperado que seja exibido um modal, onde ao clicar em "Cancelar" ou no ícone "X" o modal feche. | Não abre modal, é redirecionado para outra página onde ao clicar em Voltar, é redirecinado para página inicial de Prescrições |
   
 ### Dados Pessoais
 | Nº Teste | Cenário de teste | Registro de teste |
 |----------|--------|------------------|
-|CT-036| Ao clicar em "Atualizar Dados Pessoais", alterar algum campo corretamente e clicar em "Salvar", é esperado que o cadastro do usuário seja atualizado no sistema. | Dados Pessoais |
-|CT-037| Ao clicar em "Atualizar Dados Pessoais" e depois em "Cancelar", a edição é cancelada. | Dados Pessoais |
+|CT-036| Ao clicar em "Atualizar Dados Pessoais", alterar algum campo corretamente e clicar em "Salvar", é esperado que o cadastro do usuário seja atualizado no sistema. | É possível atualizar dados pessoais ao clicar no e-mail, não no ícone da foto de perfil como padrão |
+|CT-037| Ao clicar em "Atualizar Dados Pessoais" e depois em "Cancelar", a edição é cancelada. | Funcionalidade não atendida |
