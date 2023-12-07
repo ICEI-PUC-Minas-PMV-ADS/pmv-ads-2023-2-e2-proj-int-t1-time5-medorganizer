@@ -8,16 +8,16 @@ A seguir relatório com as evidências dos testes de usabilidade realizados no s
 
 Conforme testes realizados para verificação dos cenários de teste de usabilidade definidos antecipadamente, obtivemos os seguintes resultados:
 
-### Pontos fortes
-- O menu é claro e objetivo.
-- Todas as funcionalidades tem opções de cadastrar, editar, listar, visualizar detalhes e deletar de forma intuitiva.
-- Todas as telas de cadastro tem validações dos campos.
-- Ao cadastrar é redirecionado para a tela com a lista de todos os registros cadastrados.
-- Tem opção de voltar em todas as telas (Back to List)
-- Existe opções para logar e se cadastrar.
+## Cenários de Teste de Usabilidade
 
-### Pontos a melhorar
-- Não foi encontrado agenda.
-- Títulos das páginas de algumas funcionalidades.
-- Padronizar mensagens de erro para o preenchimento de alguns campos.
-- Exibição da senha do usuário na lista de usuários pode ser mascarada.
+| Nº Teste | Tarefa do Usuário |Registro de teste |
+|----------|--------|-------------------|
+| CT-001 | Encontre opções para logar, recuperar senha ou se cadastrar na plataforma. | Funcionalidades foram implementadas e funcionam |
+| CT-002 | Preencha os campos corretamente e realize o login na plataforma. | É possivel realizar o login informando e-mail e senha já cadastrados |
+| CT-003 | Preencha os campos corretamente e realize o cadastro na plataforma. | É possivel realizar o cadastro informando e-mail válido, senha no padrão exigido e confirmação de senha igual a senha informada |
+| CT-004 | Verifique recebimento de e-mail com nova senha. | Funcionalidade não implementada |
+| CT-005 | Encontre informações de agendamentos, clínicas, médicos, medicações e documentos. | É possível relaizar o cadastro, edição, visulização de dados, listagem e exclusão de todas essas funcionalidades |
+| CT-006 | Cadastre nova medicação e visualize todas as medicações já cadastradas. | Funcionalidades foram implementadas e funcionam |
+| CT-007 | Monitore o uso das medicações pela agenda. | Funcionalidade não implementada |
+| CT-008 | Visualize lembretes de uso de medicações no dia e horário previamente agendados. | Não é possível visualizar lembretes, mas é possível consultar a agenda |
+| CT-009 | Carregue documentos, como prescrições médica e exames. | Funcionalidade não implementada |
