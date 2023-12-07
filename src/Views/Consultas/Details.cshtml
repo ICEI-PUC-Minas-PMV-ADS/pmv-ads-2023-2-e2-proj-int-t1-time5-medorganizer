@@ -1,0 +1,77 @@
+﻿@model MedOrganizerE2.Models.ConsultaMedica
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<h1>Detalhes</h1>
+
+<div>
+    <h4>Consulta Médica</h4>
+    <hr />
+    @Html.Partial("_List")
+
+    <h3>Exames Médicos</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID do Exame</th>
+                <th>Nome do Exame</th>
+                <th>DataHora</th>
+                <th>Status</th>
+                <th>Clinica</th>
+                <!-- Outros campos do ExameMedico -->
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var exame in Model.ExamesMedicos)
+            {
+                <tr>
+                    <td>@exame.Id</td>
+                    <td>@exame.Nome</td>
+                    <td>@exame.DataHora</td>
+                    <td>@exame.Status</td>
+                    <td>@exame.Clinica</td>
+                    <!-- Outros campos do ExameMedico -->
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <h3>Prescrições</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID da Prescrição</th>
+                <th>Medicamento</th>
+                <th>Quant.</th>
+                <th>Vezes</th>
+                <th>Frequencia</th>
+                <th>Duracao</th>
+                <th>Status</th>
+
+                <!-- Outros campos da Prescricao -->
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var prescricao in Model.Prescricoes)
+            {
+                <tr>
+                    <td>@prescricao.Id</td>
+                    <td>@prescricao.Medicamento</td>
+                    <td>@prescricao.Quantidade</td>
+                    <td>@prescricao.Vezes</td>
+                    <td>@prescricao.Frequencia</td>
+                    <td>@prescricao.Duracao</td>
+                    <td>@prescricao.Status</td>
+                    
+                    <!-- Outros campos da Prescricao -->
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Editar</a> |
+    <a asp-action="Index">Voltar</a>
+</div>

@@ -1,0 +1,83 @@
+# Arquivos de build do .NET
+bin/
+obj/
+log/
+*.log
+*.user
+*.aps
+*.pch
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.lib
+*.sbr
+*.sdf
+*.pyc
+*.pyo
+*.pdb
+*.idb
+
+# Arquivos de build do ASP.NET
+# wwwroot/
+*.[Pp]ublish.xml
+*.azurePubxml
+*.pubxml
+*.publishsettings
+
+# Arquivos de pacotes
+**/[Pp]ackages/*
+**/[Pp]ackages/
+*.[Oo]bj
+*.[Oo]bj/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Ferramentas do Visual Studio
+.vs/
+
+# Pastas e arquivos de node
+node_modules/
+npm-debug.log
+
+# Arquivos e pastas de ambiente
+.env
+*.pfx
+*.cer
+*.key
+
+# Arquivos e pastas de backup
+*.bak
+*.tmp
+*~.nib
+
+# Outros arquivos e pastas
+*.swp
+*Thumb.db
+*.err
+*.userprefs
+*.csproj.user
+*.user
+*.userosscache
+*.sln.docstates
+
+# Arquivos de cache
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.[Cc]ache
+*.VisualState.xml
+*.psess
+*.vsp
+*.vspx
+*.sap
+
+# Outros
+*.db
+.DS_Store

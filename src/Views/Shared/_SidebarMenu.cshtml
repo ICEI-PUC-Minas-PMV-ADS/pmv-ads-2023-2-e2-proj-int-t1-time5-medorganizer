@@ -1,0 +1,111 @@
+<!--begin::Sidebar menu-->
+<div id="#kt_app_sidebar_menu" data-kt-menu="true" data-kt-menu-expand="false"
+    class="flex-column-fluid menu menu-sub-indention menu-column menu-rounded menu-active-bg mb-7">
+
+    <!--begin::Menu item-->
+    <div class="menu-item">
+        <a asp-area="" asp-controller="Home" asp-action="Index" class="menu-link py-3">
+            <span class="menu-icon">
+                <i class="ki-duotone ki-calendar-tick fs-3"><span class="path1"></span><span class="path2"></span></i>
+            </span>
+            <span class="menu-title">Agendamentos</span>
+        </a>
+    </div>
+    <!--end::Menu item-->
+
+    <!--begin::Menu item-->
+    <div class="menu-item">
+        <a asp-area="" asp-controller="Consultas" asp-action="Index" class="menu-link py-3">
+            <span class="menu-icon">
+                <i class="ki-duotone ki-pill fs-3"><span class="path1"></span><span class="path2"></span></i>
+            </span>
+            <span class="menu-title">Consultas Médicas</span>
+        </a>
+    </div>
+    <!--end::Menu item-->
+
+    <!--begin::Menu item-->
+    <div class="menu-item">
+        <a asp-area="" asp-controller="Exames" asp-action="Index" class="menu-link py-3">
+            <span class="menu-icon">
+                <i class="ki-duotone ki-pulse fs-3"><span class="path1"></span><span class="path2"></span></i>
+            </span>
+            <span class="menu-title">Exames</span>
+        </a>
+    </div>
+    <!--end::Menu item-->
+
+    <!--begin::Menu item-->
+    <div class="menu-item">
+        <a asp-area="" asp-controller="Prescricoes" asp-action="Index" class="menu-link py-3">
+            <span class="menu-icon">
+                <i class="ki-duotone ki-capsule fs-3"><span class="path1"></span><span class="path2"></span></i>
+            </span>
+            <span class="menu-title">Prescrições</span>
+        </a>
+    </div>
+    <!--end::Menu item-->
+
+    <!--begin:Menu item-->
+    <div data-kt-menu-trigger="click" class="menu-item here menu-accordion">
+        <!--begin:Menu link-->
+        <span class="menu-link">
+            <span class="menu-icon">
+                <i class="ki-duotone ki-folder fs-1"><span class="path1"></span><span class="path2"></span><span
+                        class="path3"></span><span class="path4"></span></i>
+            </span>
+            <span class="menu-title">Cadastros</span><span class="menu-arrow"></span>
+        </span><!--end:Menu link-->
+            
+        <!--begin:Menu sub-->
+        <div class="menu-sub menu-sub-accordion">
+
+            <!--begin:Menu item-->
+            <div class="menu-item">
+                <!--begin:Menu link-->
+                <a class="menu-link" asp-area="" asp-controller="Medicos" asp-action="Index" data-kt-page="pro">
+                    <span class="menu-bullet"><span class="bullet bullet-dot"></span></span><span
+                        class="menu-title">Médicos</span>
+                </a><!--end:Menu link-->
+            </div><!--end:Menu item-->
+
+            <!--begin:Menu item-->
+            <div class="menu-item">
+                <!--begin:Menu link-->
+                <a class="menu-link" asp-area="" asp-controller="Clinicas" asp-action="Index" data-kt-page="pro">
+                    <span class="menu-bullet"><span class="bullet bullet-dot"></span></span><span
+                        class="menu-title">Clinicas</span>
+                </a><!--end:Menu link-->
+            </div><!--end:Menu item-->
+
+            @* <!--begin:Menu item-->
+            <div class="menu-item">
+                <!--begin:Menu link-->
+                <a class="menu-link" asp-area="" asp-controller="Medicacoes" asp-action="Index" data-kt-page="pro">
+                    <span class="menu-bullet"><span class="bullet bullet-dot"></span></span><span
+                        class="menu-title">Medicações</span>
+                </a><!--end:Menu link-->
+            </div><!--end:Menu item--> *@
+            
+            <!--begin:Menu item-->
+            <div class="menu-item">
+                <!--begin:Menu link-->
+                <a class="menu-link" asp-area="" asp-controller="Medicamentos" asp-action="Index" data-kt-page="pro">
+                    <span class="menu-bullet"><span class="bullet bullet-dot"></span></span><span
+                        class="menu-title">Medicamentos</span>
+                </a><!--end:Menu link-->
+            </div><!--end:Menu item-->
+
+        </div><!--end:Menu sub-->
+    </div><!--end:Menu item-->
+
+    @* <!--begin:Menu item-->
+    <div data-kt-menu-trigger="click" class="menu-item">
+        <!--begin:Menu link-->
+        <span class="menu-link">
+            <span class="menu-icon"><i class="ki-duotone ki-rescue fs-1"><span class="path1"></span><span class="path2"></span></i></span><span class="menu-title">
+                Ajuda</span></span>
+        <!--end:Menu link-->
+    </div><!--end:Menu item--> *@
+</div>
+<!--end::Sidebar menu-->

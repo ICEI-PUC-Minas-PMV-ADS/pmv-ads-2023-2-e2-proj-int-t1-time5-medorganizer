@@ -1,0 +1,52 @@
+@model MedOrganizerE2.Models.Prescricao
+
+<div class="form-group">
+    <label asp-for="Medicamento" class="control-label"></label>
+    <select asp-for="MedicamentoId" class="form-control" asp-items="@ViewBag.Medicamentos"></select>
+    <span asp-validation-for="Medicamento" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Quantidade" class="control-label"></label>
+    <input asp-for="Quantidade" class="form-control" />
+    <span asp-validation-for="Quantidade" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Vezes" class="control-label"></label>
+    <input asp-for="Vezes" class="form-control" />
+    <span asp-validation-for="Vezes" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Frequencia" class="control-label"></label>
+    <select asp-for="Frequencia" class="form-control" asp-items="Html.GetEnumSelectList<Frequencia>()"></select>
+    <span asp-validation-for="Frequencia" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Duracao" class="control-label"></label>
+    <select asp-for="Duracao" class="form-control" asp-items="Html.GetEnumSelectList<Duracao>()"></select>
+    <span asp-validation-for="Duracao" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Status" class="control-label"></label>
+    <select asp-for="Status" class="form-control" asp-items="Html.GetEnumSelectList<StatusPrescricao>()"></select>
+    <span asp-validation-for="Status" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Progresso" class="control-label"></label>
+    <input asp-for="Progresso" class="form-control" />
+    <span asp-validation-for="Progresso" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Medico" class="control-label"></label>
+    <select asp-for="MedicoId" class="form-control" asp-items="@ViewBag.Medicos"></select>
+    <span asp-validation-for="Medico" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="ConsultaMedica" class="control-label">Consulta Médica</label>
+    <select asp-for="ConsultaMedicaId" class="form-control" asp-items="@ViewBag.Consultas"></select>
+    <span asp-validation-for="ConsultaMedica" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="InstrucoesAdicionais" class="control-label">Instruções Adicionais</label>
+    <input asp-for="InstrucoesAdicionais" class="form-control" />
+    <span asp-validation-for="InstrucoesAdicionais" class="text-danger"></span>
+</div>

@@ -1,0 +1,67 @@
+﻿@model MedOrganizerE2.Models.Medicacao
+
+@{
+    ViewData["Title"] = "Criar";
+}
+
+<h1>Criar</h1>
+
+<h4>Medicação (Administração)</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nome" class="control-label"></label>
+                <input asp-for="Nome" class="form-control" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataHora" class="control-label"></label>
+                <input asp-for="DataHora" class="form-control" />
+                <span asp-validation-for="DataHora" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Status" class="control-label"></label>
+                <select asp-for="Status" class="form-control"
+                    asp-items="Html.GetEnumSelectList<Status>()"></select>
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Prescricao" class="control-label"></label>
+                @* <input asp-for="Prescricao" class="form-control" /> *@
+                <select asp-for="PrescricaoId" class="form-control" asp-items="@ViewBag.Prescricoes"></select>
+                <span asp-validation-for="Prescricao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Medico" class="control-label"></label>
+                @* <input asp-for="Medico" class="form-control" /> *@
+                <select asp-for="MedicoId" class="form-control" asp-items="@ViewBag.Medicos"></select>
+                <span asp-validation-for="Medico" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Clinica" class="control-label"></label>
+                @* <input asp-for="Clinica" class="form-control" /> *@
+                <select asp-for="ClinicaId" class="form-control" asp-items="@ViewBag.Clinicas"></select>
+                <span asp-validation-for="Clinica" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Anotacoes" class="control-label"></label>
+                <input asp-for="Anotacoes" class="form-control" />
+                <span asp-validation-for="Anotacoes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

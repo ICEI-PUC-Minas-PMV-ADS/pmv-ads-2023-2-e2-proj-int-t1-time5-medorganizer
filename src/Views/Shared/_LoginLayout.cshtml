@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+@* *@
+<html lang="en">
+<!--begin::Head-->
+
+<head>
+    <base href="" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MedOrganizer</title>
+    <link rel="shortcut icon" href="~/media/logos/logo.png" type="image/png" />
+    <!--begin::Fonts(mandatory for all pages)-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" /> <!--end::Fonts-->
+    <!--begin::Vendor Stylesheets(used for this page only)-->
+    @* <link href="assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" /> *@
+    <!--end::Vendor Stylesheets-->
+    <!--begin::Global Stylesheets Bundle(mandatory for all pages)-->
+    <link href="~/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/style.bundle.css" rel="stylesheet" type="text/css" />
+    <!--end::Global Stylesheets Bundle-->
+
+    <link rel="stylesheet" href="~/MedOrganizerE2.styles.css" asp-append-version="true" />
+    <script>
+        // Frame-busting to prevent site from being loaded within a frame without permission (click-jacking)
+        if (window.top != window.self) {
+            window.top.location.replace(window.self.location.href);
+        }
+    </script>
+</head>
+<!--end::Head-->
+<!--begin::Body-->
+<body id="kt_body" class="auth-bg">
+    <!--begin::Theme mode setup on page load-->
+    <script>var defaultThemeMode = "light"; var themeMode; if (document.documentElement) { if (document.documentElement.hasAttribute("data-bs-theme-mode")) { themeMode = document.documentElement.getAttribute("data-bs-theme-mode"); } else { if (localStorage.getItem("data-bs-theme") !== null) { themeMode = localStorage.getItem("data-bs-theme"); } else { themeMode = defaultThemeMode; } } if (themeMode === "system") { themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; } document.documentElement.setAttribute("data-bs-theme", themeMode); }</script>
+    <!--end::Theme mode setup on page load-->
+    <!--begin::Main-->
+    <div class="d-flex flex-column flex-root">
+        <!--begin::Authentication - Sign-in -->
+        <div class="d-flex flex-column flex-column-fluid bgi-position-y-bottom position-x-center bgi-no-repeat bgi-size-contain bgi-attachment-fixed"
+            style="background-image: url(~/media/illustrations/sigma-1/14.png)">
+            <!--begin::Content-->
+            <div class="d-flex flex-center flex-column flex-column-fluid p-10 pb-lg-20">
+                <!--begin::Logo-->
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="mb-12">
+                    <img alt="Logo" src="~/media/logos/logo.png" class="h-60px" />
+                </a>
+                <!--end::Logo-->
+                <!--begin::Wrapper-->
+                <div class="w-lg-500px bg-body rounded shadow-sm p-10 p-lg-15 mx-auto">
+
+                    @RenderBody()
+
+
+
+                    <!--begin::Form-->
+                    <form class="form w-100" novalidate="novalidate" id="kt_sign_in_form"
+                        data-kt-redirect-url="../dist/index.html" action="#">
+                        <!--begin::Heading-->
+                        <div class="text-center mb-10">
+                            <!--begin::Title-->
+                            <h1 class="text-dark mb-3">MedOrganizer Login</h1>
+                            <!--end::Title-->
+                            <!--begin::Link-->
+                            <div class="text-gray-400 fw-semibold fs-4">Novo aqui?
+                                <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Crie uma nova Conta</a>
+                            </div>
+                            <!--end::Link-->
+                        </div>
+                        <!--begin::Heading-->
+                        <!--begin::Input group-->
+                        <div class="fv-row mb-10">
+                            <!--begin::Label-->
+                            <label class="form-label fs-6 fw-bold text-dark">Email</label>
+                            <!--end::Label-->
+                            <!--begin::Input-->
+                            <input class="form-control form-control-lg form-control-solid" type="text" name="email"
+                                autocomplete="off" />
+                            <!--end::Input-->
+                        </div>
+                        <!--end::Input group-->
+                        <!--begin::Input group-->
+                        <div class="fv-row mb-10">
+                            <!--begin::Wrapper-->
+                            <div class="d-flex flex-stack mb-2">
+                                <!--begin::Label-->
+                                <label class="form-label fw-bold text-dark fs-6 mb-0">Password</label>
+                                <!--end::Label-->
+                                <!--begin::Link-->
+                                @* <a href="../dist/authentication/sign-in/password-reset.html"
+                                    class="link-primary fs-6 fw-bold">Forgot Password ?</a> *@
+                                <a class="link-primary fs-6 fw-bold" id="forgot-password"
+                                    asp-page="./ForgotPassword">Esqueceu a senha?</a>
+                                <!--end::Link-->
+                            </div>
+                            <!--end::Wrapper-->
+                            <!--begin::Input-->
+                            <input class="form-control form-control-lg form-control-solid" type="password"
+                                name="password" autocomplete="off" />
+                            <!--end::Input-->
+                        </div>
+                        <!--end::Input group-->
+                        <!--begin::Actions-->
+                        <div class="text-center">
+                            <!--begin::Submit button-->
+                            <button type="submit" id="kt_sign_in_submit" class="btn btn-lg btn-primary w-100 mb-5">
+                                <span class="indicator-label">Continue</span>
+                                <span class="indicator-progress">Please wait...
+                                    <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                            </button>
+                            <!--end::Submit button-->
+                            @* <!--begin::Separator-->
+                            <div class="text-center text-muted text-uppercase fw-bold mb-5">or</div>
+                            <!--end::Separator-->
+                            <!--begin::Google link-->
+                            <a href="#" class="btn btn-flex flex-center btn-light btn-lg w-100 mb-5">
+                                <img alt="Logo" src="assets/media/svg/brand-logos/google-icon.svg"
+                                    class="h-20px me-3" />Continue with Google</a>
+                            <!--end::Google link-->
+                            <!--begin::Google link-->
+                            <a href="#" class="btn btn-flex flex-center btn-light btn-lg w-100 mb-5">
+                                <img alt="Logo" src="assets/media/svg/brand-logos/facebook-4.svg"
+                                    class="h-20px me-3" />Continue with Facebook</a>
+                            <!--end::Google link-->
+                            <!--begin::Google link-->
+                            <a href="#" class="btn btn-flex flex-center btn-light btn-lg w-100">
+                                <img alt="Logo" src="assets/media/svg/brand-logos/apple-black.svg"
+                                    class="theme-light-show h-20px me-3" />
+                                <img alt="Logo" src="assets/media/svg/brand-logos/apple-black-dark.svg"
+                                    class="theme-dark-show h-20px me-3" />Continue with Apple</a>
+                            <!--end::Google link--> *@
+                        </div>
+                        <!--end::Actions-->
+                    </form>
+                    <!--end::Form-->
+                </div>
+                <!--end::Wrapper-->
+            </div>
+            <!--end::Content-->
+            <!--begin::Footer-->
+            <div class="d-flex flex-center flex-column-auto p-10">
+                <!--begin::Links-->
+                <div class="d-flex align-items-center fw-semibold fs-6">
+                    <a href="#" class="text-muted text-hover-primary px-2">Sobre</a>
+                    <a href="#" class="text-muted text-hover-primary px-2">Suporte</a>
+                    <a href="#"
+                        class="text-muted text-hover-primary px-2">Assinar</a>
+                </div>
+                <!--end::Links-->
+            </div>
+            <!--end::Footer-->
+        </div>
+        <!--end::Authentication - Sign-in-->
+    </div>
+    <!--end::Main-->
+
+    
+    
+    <!--begin::Javascript-->
+    <script>
+        var hostUrl = "~/";        
+    </script>
+    <!--begin::Global Javascript Bundle(mandatory for all pages)-->
+    <script src="~/global/plugins.bundle.js"></script>
+    <script src="~/js/scripts.bundle.js"></script>
+    <!--end::Global Javascript Bundle-->
+    <!--begin::Custom Javascript(used for this page only)-->
+    @* <script src="~/js/custom/authentication/sign-in/general.js"></script> *@
+    <!--end::Custom Javascript-->
+
+    <!--end::Javascript-->
+
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+<!--end::Body-->
+</html>

@@ -1,0 +1,21 @@
+<!--begin::Sidebar-->
+<div id="kt_app_sidebar" class="app-sidebar  flex-column "
+     data-kt-drawer="true" data-kt-drawer-name="app-sidebar" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="250px" data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_app_sidebar_mobile_toggle"
+     >
+            <!--begin::Main-->
+<div class="d-flex flex-column justify-content-between h-100 hover-scroll-overlay-y my-2 mx-5 d-flex flex-column"
+	id="kt_app_sidebar_main"
+	data-kt-scroll="true"
+	data-kt-scroll-activate="true"
+	data-kt-scroll-height="auto"
+	data-kt-scroll-dependencies="#kt_app_header"
+	data-kt-scroll-wrappers="#kt_app_main"
+	data-kt-scroll-offset="5px"
+>
+<!--layout-partial:layout/partials/sidebar/_menu.html-->
+		@Html.Partial("_SidebarMenu")
+<!--layout-partial:layout/partials/sidebar/_footer.html-->
+		@Html.Partial("_SidebarFooter")
+</div>
+<!--end::Main-->    </div>
+<!--end::Sidebar-->

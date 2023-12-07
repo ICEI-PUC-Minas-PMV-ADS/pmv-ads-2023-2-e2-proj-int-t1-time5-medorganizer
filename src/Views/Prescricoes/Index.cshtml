@@ -1,0 +1,79 @@
+﻿@model IEnumerable<MedOrganizerE2.Models.Prescricao>
+
+@{
+    ViewData["Title"] = "Prescrições";
+}
+
+<h1>Prescrições</h1>
+
+<p>
+    <a asp-action="Create">Criar Nova</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Medicamento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vezes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Frequencia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Duracao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Progresso)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ConsultaMedica)                
+            </th>
+            <th></th>
+            
+            
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Medicamento.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vezes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Frequencia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Duracao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Progresso)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConsultaMedica.Nome)
+            </td>            
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
